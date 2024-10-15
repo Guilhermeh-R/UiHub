@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-UihubApplication<uihub>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.uihub.uihub.UihubApplication",
+            "projectName": "uihub",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

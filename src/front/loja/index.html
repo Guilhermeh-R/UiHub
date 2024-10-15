@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Página Inicial</title>
+    <!-- Ícones do Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- CSS do tema principal (inclui o Bootstrap)-->
+    <link href="css/mystyles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navegação-->
+    <nav class="navbar navbar-expand-lg navbar-light corMenu">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand nomeLoja corTextoMenu" href="#!">Nome da Loja</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active corTextoMenu" aria-current="page" href="#!">Home</a></li>
+                </ul>
+                
+                <form id="searchFormLoja">
+                    <input type="text" id="searchInput" placeholder="Pesquisar...">
+                    <button type="submit" id="searchButton">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Cabeçalho-->
+    <header class="bg-dark">
+        <div class="container-fluid p-0">
+            <img src="" class="img-fluid bannerLoja">
+        </div>
+        <div id="cart-container"></div>
+    </header>
+
+    <!-- Seção-->
+    <section class="py-5 corFundo">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="product-list">
+                <!-- Produtos serão listados aqui -->
+            </div>
+        </div>
+    </section>
+    <!-- Rodapé-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; 2024</p></div>
+    </footer>
+    <!-- JS principal do Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS do tema principal-->
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

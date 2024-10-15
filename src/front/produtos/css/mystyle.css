@@ -1,0 +1,30 @@
+
+.img-square {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    /* Para garantir que a imagem se ajuste ao quadrado sem distorção */
+}
+
+/* Centralizar verticalmente as células */
+#datatablesSimple td {
+    vertical-align: middle;
+}
+
+/* Centralizar horizontalmente as células da coluna 'Foto' */
+#datatablesSimple td img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#datatablesSimple tr {
+    border-bottom: 1px solid #ddd; /* Define a cor e a espessura da linha de separação */
+}
+table#datatablesSimple th, table#datatablesSimple td {
+    padding: 8px;
+    text-align: left;
+}
+table#datatablesSimple tbody tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre uma linha */
+}

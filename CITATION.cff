@@ -1,0 +1,28 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: UiHUB
+authors:
+  - family-names: Bicalho Silva
+    given-names: Amanda 
+  - family-names: Prudêncio da Costa
+    given-names: Felipe
+  - family-names: Rodrigues
+    given-names: Guilherme 
+  - family-names: Aquino Campelo
+    given-names: João Augusto
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Silva Tavares
+    given-names: Cleiton
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira de Araújo
+    given-names: Ivan Luiz
+    keywords:
+    - Loja virtual
+    - Instagram
+    - WhatsApp
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti2-3740100-uihub.git
+license: CC-BY-4.0
+version: 0.0.1
+date-released: 2024-07-04

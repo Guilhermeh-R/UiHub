@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indicadores de Desempenho - UiHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .spacing {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center mt-5">
+    <h1>Indicadores de Desempenho - UiHub</h1>
+    <div class="spacing mt-5">
+      <p><span style="font-weight: bold;">Usuários cadastrados nos últimos 30 dias:</span> <span class="usuarios">0</span></p>
+      <p><span style="font-weight: bold;">Produtos cadastrados nos últimos 30 dias:</span> <span class="produtos">0</span></p>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        // Função para verificar se uma data está dentro dos últimos 30 dias
+        function isWithinLast30Days(dateArray) {
+          const [year, month, day] = dateArray;
+          const date = new Date(year, month - 1, day);
+          const now = new Date();
+          const thirtyDaysAgo = new Date();
+          thirtyDaysAgo.setDate(now.getDate() - 30);
+          return date >= thirtyDaysAgo && date <= now;
+        }
+
+        // Buscando os usuários
+        const userResponse = await fetch('http://localhost:8080/usuarios');
+        const users = await userResponse.json();
+        const recentUsers = users.filter(user => isWithinLast30Days(user.data_de_registro));
+        document.querySelector('.usuarios').textContent = recentUsers.length;
+
+        // Buscando os produtos
+        const productResponse = await fetch('http://localhost:8080/produtos');
+        const products = await productResponse.json();
+        const recentProducts = products.filter(product => {
+          const productDate = new Date(product.dataCriacao);
+          const now = new Date();
+          const thirtyDaysAgo = new Date();
+          thirtyDaysAgo.setDate(now.getDate() - 30);
+          return productDate >= thirtyDaysAgo && productDate <= now;
+        });
+        document.querySelector('.produtos').textContent = recentProducts.length;
+
+      } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+      }
+    });
+  </script>
+</body>
+</html>
